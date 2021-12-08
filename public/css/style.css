@@ -1,11 +1,15 @@
-.kanban-title {
+.container {
+    margin: 0 auto;
+}
+
+.title {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.kanban-nav-menu {
+.nav-menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,12 +18,12 @@
     margin-left: 30px;
   }
 
-.kanban-nav-btn {
+.nav-btn {
     margin-right: 90px;
     cursor:pointer;
 }
 
-.kanban-search-input {
+.search-input {
     background-size: 20px;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAh1JREFUWEftl40thEEQht+rgBKoABWgAlSADqgAFaACVIAKUAEqQAdUQJ5kJ5ms/XZn73LnJDfJl1zu25197p2fnRtpzmw0Zzz610ArknYkbUni83pS90XSu6RHSffp89jCRxTi8BNJB8FTriWdjQvWAtqVdCVpOQhjyz4lHUq669xXzSEUAcbbkyQUIEw8GKHjYf1mth4o1odtSCGUuXVeXiUdpTypOSe/LiStuUV7PUqVgMiZZxcmYDiIMESM8JLgBsW+1ej+EhAS76eTe2EMOIe6iRZFDoQ6b06G7UCYhlRD1Qf3EpVoD1XLgciT87SDBMbpJEboLNGPU351AVGmND+su0IKJ/lKpWlSLF1AlLIl44Yr7Zafofe0AwoEwzc+u4C+3epW02z5tvddPvNDuzYHicznV6Tj50DTDFmoSHKgaSb1Zer2XTnky56SpQ9NYhOX/bQaI/mD7+b107o6yClUajrKZOTqoEvbEMd8dBqReuhyBWTJ9Y8eqBzmI4GFflR0/ACQ1k9O1IyrhqvHlGEthcIIErJa8ysNaAAxDTAF+AGN7s76obuPPVxFTWt1Y+4enFn4mg7TAsIEsN2LfB2CagHhiOogIW1GqkFRTUyMPOSMn61CUBEgAwAMxexvEGECwOZrZh0A8uTtguoBioartC4MNSsgC5cPezGnZgmUQxUHwFkDGZS1j1/h/Qugai4ugFqlulCopdAPAal3JSpnRUAAAAAASUVORK5CYII=");
     background-repeat: no-repeat;
@@ -34,7 +38,7 @@
     border-radius: 3px;
 }
 
-.kanban-add {
+.add {
     display: flex;
     align-items: center;
     font-size: 15px;
@@ -49,7 +53,7 @@
     box-sizing: border-box;
 }
 
-.kanban-menubtn {
+.menubtn {
     display: flex;
     align-items: center;
     font-size: 15px;
@@ -63,21 +67,20 @@
     box-sizing: border-box;
 }
 
-.kanban-update {
+.update {
     font-size: 12px;
     color: gray;
 }
 
-.kanban-columns {
+.column-container {
     width: 1050px;
-    height: 700px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
 }
 
 
-.kanban-column {
+.column {
     background: rgba(233, 236, 239, 0.7);
     border: 1px solid #ced4da;
     border-radius: 10px;
