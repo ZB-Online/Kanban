@@ -1,7 +1,9 @@
 :root {
   --main-bg-color: rgb(245, 245, 245);
-  --main-border-color: rgb(197, 197, 197);
+  --main-border-color: #c5c5c5;
   --cnt-bg-color: #e3e3e3;
+  --border-active-color: #388bfd;
+  --dark-gray-color: gray;
 }
 
 .container {
@@ -76,7 +78,7 @@
 
 .update {
   font-size: 12px;
-  color: gray;
+  color: var(--dark-gray-color);
 }
 
 .column-container {
@@ -86,15 +88,10 @@
 }
 
 .column {
-  background: rgba(233, 236, 239, 0.7);
+  background: var(--main-bg-color);
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
   margin: 10px;
-}
-.column {
-  background-color: var(--main-bg-color);
-  border-radius: 10px;
-  border: 1px solid var(--main-border-color);
 }
 .column-header {
   display: flex;
@@ -122,7 +119,7 @@
 }
 .column-icon-add:hover {
   cursor: pointer;
-  color: blue;
+  color: var(--border-active-color);
 }
 .column-list {
   height: 600px;
@@ -148,7 +145,7 @@
 .column-item {
   width: 100%;
   height: 100px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 10px;
   list-style: none;
   border: 1px solid var(--main-border-color);
@@ -170,17 +167,16 @@
   padding: 1px 5px;
 }
 .footer-btn {
-  color: blue;
+  color: var(--border-active-color);
 }
 .footer-btn:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-
 .note-container {
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
-  padding: 8px 8px 8px 8px;
+  padding: 13px 8px 8px 8px;
   overflow: auto;
   margin-bottom: 8px;
   display: grid;
@@ -188,8 +184,28 @@
   background-color: #ffffff;
 }
 .note-container:active {
-  border: 1px solid #0c2d6b;
-  box-shadow: 2px 2px 1px #388bfd, -2px -2px 1px #388bfd, 2px -2px 1px #388bfd, -2px 2px 1px #388bfd;
+  box-shadow: 2px 2px 1px var(--border-active-color), -2px -2px 1px var(--border-active-color),
+    2px -2px 1px var(--border-active-color), -2px 2px 1px var(--border-active-color);
+}
+box-icon {
+  height: 17px;
+}
+.note-content {
+  font-size: 0.9rem;
+  min-height: 33px;
+  margin-bottom: 5px;
+}
+.note-content-view {
+  text-align: justify;
+}
+/* TODO : .block 추가하여 active component 결정 */
+.block {
+  display: none;
+}
+.note-content-input {
+  /* TODO : e.scrollHeight로 height 동적으로 변경 */
+  width: 95%;
+  overflow: visible;
 }
 .note-edit-btn,
 .note-delete-btn {
@@ -200,27 +216,13 @@
   text-align: center;
   background: none;
 }
-.note-content {
-  font-size: 0.9rem;
-  color: #000000;
-  min-height: 33px;
-}
-.note-content-view {
-  min-height: 33px;
-}
-box-icon {
-  height: 17px;
-}
 .note-writer {
   margin-top: 10px;
   font-size: 0.8rem;
-  color: #8b949e;
+  color: var(--dark-gray-color);
 }
 .note-writer-id {
   margin-top: 4px;
   font-size: 0.8rem;
-  color: black;
-}
-.note-content-input {
-  display: none;
+  color: #000000;
 }
