@@ -5,7 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kanban</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <script defer src="./app.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="kanban-container">
+      <nav class="kanban-nav">
+        <ul class="kanban-nav-menu">
+          <li class="kanban-nav-btn">
+            Project Name
+            <div class="kanban-update">Updated 43minutes ago</div>
+          </li>
+          <li class="kanban-nav-btn">
+            <div class="input-div">
+              <input type="text" placeholder=" Filter Cards" class="kanban-search-input">
+            </div>
+          </li>
+          <li class="kanban-nav-btn">
+          <div class="kanban-add">
+            Add cards
+          </div>
+          </li>
+          <li class="kanban-nav-btn">
+            <div class="kanban-menubtn">
+              Menu
+            </div>
+          </li>
+        </ul>
+
+      </nav>
+
+      <div class="kanban-columns">
+        <div class="kanban-column todo">
+        </div>
+        <div class="kanban-column progress">
+        </div>
+        <div class="kanban-column done">
+        </div>
+      </div>
+
+    </div>
+  </body>
 </html>
