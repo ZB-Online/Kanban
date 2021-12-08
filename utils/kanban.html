@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    <style>
+      * {
+        box-sizing: content-box;
+      }
+      .column {
+        height: 600px;
+        width: 300px;
+        border: 1px solid black;
+        padding: 5px;
+      }
+      .kanban-container {
+        min-height: 100px;
+        border: 1px solid #949494;
+        border-radius: 10px;
+        padding: 10px 10px 5px 10px;
+        overflow: auto;
+        margin-bottom: 5px;
+      }
+      .kanban-container:active {
+        border: 2px solid #1269c7;
+      }
+      .kanban-header {
+        display: grid;
+        grid-template-columns: 80% 10% 10%;
+      }
+      .kanban-title {
+        font-size: 1.2rem;
+        color: #1269c7;
+        vertical-align: middle;
+        margin-right: 10px;
+        overflow: hidden;
+      }
+      /* 수정,삭제 클릭시 칸반 active되는 것 js로 수정해야 함 */
+      .kanban-edit,
+      .kanban-delete {
+        border: 1px solid #ffffff;
+      }
+      .kanban-edit:hover {
+        border: 1px solid #949494;
+        border-radius: 50%;
+      }
+      .kanban-delete:hover {
+        border: 1px solid #949494;
+        border-radius: 50%;
+      }
+      .kanban-content {
+        font-size: 0.8rem;
+        color: #949494;
+        vertical-align: middle;
+        margin-top: 3%;
+        min-height: 33px;
+      }
+      .kanban-footer {
+        float: right;
+      }
+      .kanban-user {
+        height: 30px;
+      }
+      box-icon {
+        height: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="column">
+      <div class="kanban-container">
+        <div class="kanban-header">
+          <div class="kanban-title">제목</div>
+          <div class="kanban-edit"><box-icon name="edit-alt"></box-icon></div>
+          <div class="kanban-delete"><box-icon name="trash"></box-icon></div>
+        </div>
+        <div class="kanban-content">내용</div>
+        <div class="kanban-footer"><box-icon class="kanban-user" name="user-circle"></box-icon></div>
+      </div>
+
+      <div class="kanban-container">
+        <div class="kanban-header">
+          <div class="kanban-title">제목</div>
+          <div class="kanban-edit"><box-icon name="edit-alt"></box-icon></div>
+          <div class="kanban-delete"><box-icon name="trash"></box-icon></div>
+        </div>
+        <div class="kanban-content">
+          해커톤 마무리하기해커톤 마무리하기해커톤 마무리하기해커톤 마무리하기해커톤 마무리하기해커톤 마무리하기해커톤
+          마무리하기해커톤 마무리하기해커톤 마무리하기해커톤 마무리하기해커톤 마무리하기해커톤 마무리하기해커톤
+          마무리하기해커톤 마무리하기
+        </div>
+        <div class="kanban-footer"><box-icon class="kanban-user" name="user-circle"></box-icon></div>
+      </div>
+
+      <div class="kanban-container">
+        <div class="kanban-header">
+          <div class="kanban-title">제목 긴제목제목 긴제목제목 긴제목제목 긴제목제목 긴제목제목 긴제목</div>
+          <div class="kanban-edit"><box-icon name="edit-alt"></box-icon></div>
+          <div class="kanban-delete"><box-icon name="trash"></box-icon></div>
+        </div>
+        <div class="kanban-content">해커톤</div>
+        <div class="kanban-footer"><box-icon class="kanban-user" name="user-circle"></box-icon></div>
+      </div>
+    </div>
+  </body>
+</html>
