@@ -8,33 +8,79 @@
     <meta name="description" content="kanban board project" />
     <meta name="keywords" content="kanban, kanbanboard, 칸반, 칸반보드" />
     <link rel="stylesheet" href="./css/style.css" />
+    <title>Kanban</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <script defer src="./app.js"></script>
   </head>
   <body>
-    <article class="column kanban-column">
-      <div class="column-header">
-        <span class="column-count">0</span>
-        <h2 class="column-title">To do</h2>
-        <box-icon name="plus" class="icon-plus"></box-icon>
-      </div>
-      <ul class="column-list"></ul>
-      <div class="column-footer">
-        <span class="footer-message">Automated as <span class="footer-title">To do</span></span>
-        <span class="footer-btn">Manage</span>
-      </div>
-    </article>
-    <article class="column kanban-column">
-      <div class="column-header">
-        <span class="column-count">0</span>
-        <h2 class="column-title">In Progress</h2>
-        <box-icon name="plus" class="icon-plus"></box-icon>
-      </div>
-      <ul class="column-list"></ul>
-      <div class="column-footer">
-        <span class="footer-message">Automated as <span class="footer-title">Progress</span></span>
-        <span class="footer-btn">Manage</span>
-      </div>
-    </article>
+    <header class="title">
+      <h1>Kanban Board</h1>
+    </header>
+    <div class="container">
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li class="nav-btn">
+            Project Name
+            <div class="update">Updated 43minutes ago</div>
+          </li>
+          <li class="nav-btn">
+            <div class="input-div">
+              <input type="text" placeholder=" Filter Cards" class="search-input" />
+            </div>
+          </li>
+          <li class="nav-btn">
+            <div class="add">
+              Add cards
+            </div>
+          </li>
+          <li class="nav-btn">
+            <div class="menubtn">
+              Menu
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <div class="column-container">
+          <article class="column kanban-column">
+            <div class="column-header">
+              <span class="column-count">0</span>
+              <h2 class="column-title">To do</h2>
+              <box-icon name="plus" class="icon-plus"></box-icon>
+            </div>
+            <ul class="column-list"></ul>
+            <div class="column-footer">
+              <span class="footer-message">Automated as <span class="footer-title">To do</span></span>
+              <span class="footer-btn">Manage</span>
+            </div>
+          </article>
+          <article class="column kanban-column">
+            <div class="column-header">
+              <span class="column-count">0</span>
+              <h2 class="column-title">In Progress</h2>
+              <box-icon name="plus" class="icon-plus"></box-icon>
+            </div>
+            <ul class="column-list"></ul>
+            <div class="column-footer">
+              <span class="footer-message">Automated as <span class="footer-title">Progress</span></span>
+              <span class="footer-btn">Manage</span>
+            </div>
+          </article>
+          <article class="column kanban-column">
+            <div class="column-header">
+              <span class="column-count">0</span>
+              <h2 class="column-title">To do</h2>
+              <box-icon name="plus" class="icon-plus"></box-icon>
+            </div>
+            <ul class="column-list"></ul>
+            <div class="column-footer">
+              <span class="footer-message">Automated as <span class="footer-title">To do</span></span>
+              <span class="footer-btn">Manage</span>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
