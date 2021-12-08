@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
+    <title>Kanban</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kanban</title>
+    <meta name="description" content="kanban board project" />
+    <meta name="keywords" content="kanban, kanbanboard, 칸반, 칸반보드" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <script defer src="./app.js"></script>
   </head>
-  <body></body>
+  <body>
+    <article class="column kanban-column">
+      <div class="column-header">
+        <span class="column-count">0</span>
+        <h2 class="column-title">To do</h2>
+        <box-icon name="plus" class="icon-plus"></box-icon>
+      </div>
+      <ul class="column-list"></ul>
+      <div class="column-footer">
+        <span class="footer-message">Automated as <span class="footer-title">To do</span></span>
+        <span class="footer-btn">Manage</span>
+      </div>
+    </article>
+    <article class="column kanban-column">
+      <div class="column-header">
+        <span class="column-count">0</span>
+        <h2 class="column-title">In Progress</h2>
+        <box-icon name="plus" class="icon-plus"></box-icon>
+      </div>
+      <ul class="column-list"></ul>
+      <div class="column-footer">
+        <span class="footer-message">Automated as <span class="footer-title">Progress</span></span>
+        <span class="footer-btn">Manage</span>
+      </div>
+    </article>
+  </body>
 </html>
