@@ -1,5 +1,6 @@
 .container {
   margin: 0 auto;
+  width: 1280px;
 }
 
 .title {
@@ -73,7 +74,6 @@
 }
 
 .column-container {
-  width: 1050px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
@@ -86,7 +86,6 @@
   margin: 10px;
 }
 .column {
-  width: 400px;
   background-color: rgb(245, 245, 245);
   border-radius: 10px;
   border: 1px solid rgb(197, 197, 197);
@@ -130,14 +129,14 @@
   scrollbar-width: 10px;
 }
 /* chrome, safari */
-::-webkit-scrollbar {
+.column-list::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-thumb {
+.column-list::-webkit-scrollbar-thumb {
   background-color: #dbdbdb;
   border-radius: 5px;
 }
-::-webkit-scrollbar-track {
+.column-list::-webkit-scrollbar-track {
   background-color: whitesmoke;
 }
 .column-item {
