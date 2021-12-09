@@ -125,7 +125,8 @@
   color: var(--border-active-color);
 }
 .note-list {
-  height: 600px;
+  min-height: 600px;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 10px;
