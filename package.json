@@ -4,7 +4,8 @@
   "description": "Kanban Board",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
@@ -24,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/ZB-Online/Kanban/issues"
   },
-  "homepage": "https://github.com/ZB-Online/Kanban#readme"
+  "homepage": "https://github.com/ZB-Online/Kanban#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+
 }

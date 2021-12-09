@@ -10,9 +10,9 @@
   },
   "globals": { "_": "readonly" },
   "plugins": ["import", "html"],
-  "extends": ["airbnb-base","prettier"],
+  "extends": ["airbnb-base", "prettier"],
   "rules": {
-    "no-console": "warn",
+    "no-console": "off",
     "no-plusplus": "off",
     "no-shadow": "off",
     "vars-on-top": "off",
@@ -28,13 +28,16 @@
     "require-await": "error",
     "arrow-parens": ["error", "as-needed"], // a => {}
     "no-param-reassign": ["error", { "props": false }],
-    "no-unused-expressions": ["error", {
-      "allowTernary": true,      // a || b
-      "allowShortCircuit": true, // a ? b : 0
-      "allowTaggedTemplates": true
-    }],
-    "import/extensions":"off",
-    "import/prefer-default-export":"off",
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTernary": true, // a || b
+        "allowShortCircuit": true, // a ? b : 0
+        "allowTaggedTemplates": true
+      }
+    ],
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   }
 }
