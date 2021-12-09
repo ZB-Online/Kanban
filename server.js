@@ -1,5 +1,11 @@
 const express = require('express');
 
+const app = express();
+const PORT = 5678;
+
+app.use(express.static('public'));
+app.use(express.json());
+
 // Mock
 const COLUMN = {
   TODO: 'TODO',
@@ -40,12 +46,6 @@ let notes = [
   },
 ];
 
-const app = express();
-const PORT = 5678;
-
-app.use(express.static('public'));
-app.use(express.json());
-
 const confirmId = id => notes.some(note => note.id === +id);
 
 app.get('/api/notes', (req, res) => {
@@ -59,7 +59,6 @@ app.post('/api/notes', (req, res) => {
   res.send(newNote);
 });
 
-// TODO : payload 안들어왔을 때 처리하기
 app.put('/api/notes/:id', (req, res) => {
   const { id } = req.params;
   if (!Object.keys(req.body).length) return res.status(400).send({ error: '400', message: MESSAGE.VALUE_NULL });
