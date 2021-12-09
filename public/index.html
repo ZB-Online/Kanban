@@ -44,45 +44,7 @@
               <h2 class="column-title">To do</h2>
               <box-icon name="plus" class="icon-plus"></box-icon>
             </div>
-            <div class="add-note-container">
-              <textarea class="add-note-content-input"></textarea>
-              <div class="add-note-submit-form">
-                <button class="note-add-btn">Add</button>
-                <button class="note-cancel-btn">Cancel</button>
-              </div>
-            </div>
-            <ul class="note-list">
-              <li data-id="1" data-column="TODO" class="note-container draggable" draggable="true">
-                <div class="note-icon"><box-icon name="spreadsheet"></box-icon></div>
-                <div class="note-content">
-                  <p class="note-content-view">1번 아이템</p>
-                  <textarea class="note-content-input block"></textarea>
-                  <p class="note-writer">Added by <span class="note-writer-id">홍길동</span></p>
-                </div>
-                <button class="note-edit-btn"><box-icon name="edit-alt" animation="tada-hover"></box-icon></button>
-                <button class="note-delete-btn"><box-icon name="trash" animation="tada-hover"></box-icon></button>
-              </li>
-              <li data-id="2" data-column="TODO" class="note-container draggable" draggable="true">
-                <div class="note-icon"><box-icon name="spreadsheet"></box-icon></div>
-                <div class="note-content">
-                  <p class="note-content-view">2번 아이템</p>
-                  <textarea class="note-content-input block"></textarea>
-                  <div class="note-writer">Added by <span class="note-writer-id">홍길동</span></div>
-                </div>
-                <button class="note-edit-btn"><box-icon name="edit-alt" animation="tada-hover"></box-icon></button>
-                <button class="note-delete-btn"><box-icon name="trash" animation="tada-hover"></box-icon></button>
-              </li>
-              <li data-id="3" data-column="TODO" class="note-container draggable" draggable="true">
-                <div class="note-icon"><box-icon name="spreadsheet"></box-icon></div>
-                <div class="note-content">
-                  <p class="note-content-view">3번 아이템</p>
-                  <textarea class="note-content-input block"></textarea>
-                  <div class="note-writer">Added by <span class="note-writer-id">홍길동</span></div>
-                </div>
-                <button class="note-edit-btn"><box-icon name="edit-alt" animation="tada-hover"></box-icon></button>
-                <button class="note-delete-btn"><box-icon name="trash" animation="tada-hover"></box-icon></button>
-              </li>
-            </ul>
+            <ul class="note-list todo"></ul>
             <div class="column-footer">
               <span class="footer-message">Automated as <span class="footer-title">To do</span></span>
               <span class="footer-btn">Manage</span>
@@ -94,7 +56,7 @@
               <h2 class="column-title">In Progress</h2>
               <box-icon name="plus" class="icon-plus"></box-icon>
             </div>
-            <ul class="note-list"></ul>
+            <ul class="note-list progress"></ul>
             <div class="column-footer">
               <span class="footer-message">Automated as <span class="footer-title">Progress</span></span>
               <span class="footer-btn">Manage</span>
@@ -106,7 +68,7 @@
               <h2 class="column-title">Done</h2>
               <box-icon name="plus" class="icon-plus"></box-icon>
             </div>
-            <ul class="note-list"></ul>
+            <ul class="note-list done"></ul>
             <div class="column-footer">
               <span class="footer-message">Automated as <span class="footer-title">Done</span></span>
               <span class="footer-btn">Manage</span>
