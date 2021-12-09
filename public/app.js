@@ -41,6 +41,8 @@ let notes = [
   },
 ];
 
+let isAdd = false;
+
 const $columnList = document.querySelectorAll('.note-list');
 const $columnContainer = document.querySelector('.column-container');
 const $kanbanColumn = document.querySelectorAll('.kanban-column');
@@ -73,6 +75,7 @@ const renderNoteByCol = (notes, colList) => {
 };
 
 const renderNotes = () => {
+  clearList();
   const todo = [];
   const progress = [];
   const done = [];
@@ -83,8 +86,6 @@ const renderNotes = () => {
     else done.push(el);
   });
 
-  console.log($columnList);
-
   [...$columnList].forEach(colList => {
     if (colList.classList.contains('todo')) {
       renderNoteByCol(todo, colList);
@@ -94,6 +95,15 @@ const renderNotes = () => {
       renderNoteByCol(done, colList);
     }
   });
+
+  const $todoColumnCount = document.querySelector('.todo-column-count');
+  $todoColumnCount.textContent = notes.filter(note => note.column === 'TODO').length;
+
+  const $progressColumnCount = document.querySelector('.progress-column-count');
+  $progressColumnCount.textContent = notes.filter(note => note.column === 'PROGRESS').length;
+
+  const $doneColumnCount = document.querySelector('.done-column-count');
+  $doneColumnCount.textContent = notes.filter(note => note.column === 'DONE').length;
 };
 
 const addNote = colList => {
@@ -127,18 +137,21 @@ const editNote = target => {
     $noteContentView.classList.toggle('block');
   } else if ($noteContentView.classList.contains('block')) {
     const userInput = $noteContentInput.value;
+
     let targetNote = {};
-    notes.forEach(note => {
+
+    notes.forEach((note, i) => {
       if (note.id === +targetId) {
         targetNote = { ...note, content: userInput };
-        note = targetNote;
+        notes[i] = targetNote;
       }
     });
 
     (async () => {
       const res = await fetch.put(`api/notes/${targetId}`, targetNote);
-
       renderNotes();
+      $noteContentInput.classList.toggle('block');
+      $noteContentView.classList.toggle('block');
     })();
   }
 };
@@ -188,8 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const res = await fetch.get('api/notes');
     notes = await res;
     renderNotes();
-
-    console.log(res);
 
     const $draggables = document.querySelectorAll('.draggable');
 
