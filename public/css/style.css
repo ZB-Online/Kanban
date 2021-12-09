@@ -121,7 +121,7 @@
   cursor: pointer;
   color: var(--border-active-color);
 }
-.column-list {
+.note-list {
   height: 600px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -132,25 +132,17 @@
   scrollbar-width: 10px;
 }
 /* chrome, safari */
-.column-list::-webkit-scrollbar {
+.note-list::-webkit-scrollbar {
   width: 10px;
 }
-.column-list::-webkit-scrollbar-thumb {
+.note-list::-webkit-scrollbar-thumb {
   background-color: var(--main-bg-color);
   border-radius: 5px;
 }
-.column-list::-webkit-scrollbar-track {
+.note-list::-webkit-scrollbar-track {
   background-color: whitesmoke;
 }
-.column-item {
-  width: 100%;
-  height: 100px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  list-style: none;
-  border: 1px solid var(--main-border-color);
-  margin: 5px 0px;
-}
+
 .column-footer {
   display: flex;
   justify-content: space-between;
@@ -236,12 +228,12 @@ box-icon {
 
 /* height 동적으로 수정 */
 .add-note-content-input {
-  width:99%;
+  width: 99%;
   border: 1px solid var(--main-border-color);
 }
 
-.add-note-submit-form{
-  width:100%;
+.add-note-submit-form {
+  width: 100%;
   height: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -253,10 +245,9 @@ box-icon {
   border-radius: 10px;
   background-color: rgb(25, 110, 42);
   font-weight: 600;
-  color: #ffffff
-
+  color: #ffffff;
 }
-.note-cancel-btn{
+.note-cancel-btn {
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
 }
@@ -264,4 +255,8 @@ box-icon {
 /* textarea 입력 시 활성화 */
 .active {
   background-color: #238636;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
 }
